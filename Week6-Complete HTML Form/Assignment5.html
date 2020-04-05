@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Coursera-Assignment6</title>
+	<link rel="stylesheet" type="text/css" href="ass6.css">
+	<script>
+		function matchPassword()//checks password with confirm password
+		{
+			var pass1=document.getElementById("password1").value;
+			var pass2=document.getElementById("password2").value;
+			if(pass1==pass2)
+			{
+				alert("passwords match");
+				return true;
+			}
+			else
+			{
+				alert("passwords don't match");
+				return false;
+			}
+			return false;
+		}
+		function checkUsername()//checks length of username
+		{
+			var fname=document.getElementById("username").value;
+			if(fname.length>4)
+			{
+				document.getElementById("userconfirm").style.color="Green";
+				document.getElementById("userconfirm").innerHTML="Username valid";
+			}
+			else
+			{
+				document.getElementById("userconfirm").style.color="Red";
+				document.getElementById("userconfirm").innerHTML="Username invalid";
+			}
+		}
+		function displayMessage()//displays message on sumbission of form
+		{
+			
+			alert("Thanks for your response");
+		}
+	</script>
+</head>
+<body>
+	<h1>Welcome to course registration portal</h1>
+	<p id="regular">This portal allows aspiring students to take up various courses according to their interest and field of learning
+	Helps to boost career of students.</p>
+	<br><p id="firstclass">Student can create his/her account with username and password and access it for future use.</p><br>
+	<p id="secondclass">Many useful and trendng courses are offered as data science,ML/AI,web development etc to enhance skillset of students.</p>
+	<img src="welcome.jpg">
+	<form action="display.html" onsubmit="return matchPassword();">
+		Firstname:<br><!--Asks for firstname from user-->
+		<input type="text" name="firstname" required><br>
+		Lastname:<br><!--Asks for lastname from user-->
+		<input type="text" name="lastname"><br>
+		Email ID:<br><!--Asks for email id from user-->
+		<input type="text" name="Email"><br>
+		Phone Number:<br><!--Asks for phone number from user-->
+		<input type="text" name="Phone number"><br>
+		Age:<br><!--Asks for age from user-->
+		<input type="number" name="age"min="18" max="25"><br>
+		Address:<br><!--Asks for address from user-->
+		<input type="text" name="address"><br>
+		Username:<br><!--Asks for username from user-->
+		<input type="text" name="username" id="username" onblur="checkUsername();"><br>
+		<p id="userconfirm"></p>
+		Password:<br><!--Inputs a password from user-->
+		<input type="password"  id="password1"><br>
+		Confirm Password:<br><!--Inputs a confirm password to check with above password entered-->
+		<input type="password"  id="password2"><br>
+		List of courses interested:<br><!--Provides options for selection of courses-->
+		<input type="checkbox" name="courses" value="Data science">Data science<br>
+		<input type="checkbox" name="courses" value="ML/AI">ML/AI<br>
+		<input type="checkbox" name="courses" value="Front-end Web development">Front-end Web development<br>
+		<input type="checkbox" name="courses" value="Full-stack Web development">Full-stack Web development<br>
+		<input type="checkbox" name="courses" value="Ethical Hacking">Ethical Hacking<br>
+		<input type="checkbox" name="courses" value="Iot">Iot<br>
+		<input type="checkbox" name="courses" value="Interview Preparation">Interview Preparation<br>
+		<input type="checkbox" name="courses" value="App development">App development<br>
+		<input type="checkbox" name="courses" value="Data structures Algorithms">Data structures Algorithms<br>
+		Feedback(if any):<br><!--Takes feedback from user-->
+		<input type="text" name="feedback"><br>
+		<input type="submit" value="Submit your response">
+	</form>
+</body>
+</html>
