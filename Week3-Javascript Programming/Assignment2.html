@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>First Javascript Program</title>
+	<script>
+		function displayMessage()
+		{
+			alert("Nice to meet you!!");
+		}
+		function calculateProduct()
+		{
+			var num1=document.getElementById("demo").value;
+			document.getElementById("para").innerHTML="your number * 10 is " + num1*10;
+		}
+	</script>
+</head>
+<body onload="displayMessage();">
+	<H1>Coursera Javascript Assignment</H1>
+	<p>Welcome to my page</p>
+	<input type="text" id="demo"><button onclick="calculateProduct();">Click to get product</button>
+	<p id="para"></p>
+</body>
+</html>
