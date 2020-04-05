@@ -1,0 +1,47 @@
+body
+{
+	background-color:green;
+}
+#text
+{
+	color:red;
+	font-size:200%;
+}
+p.regular
+{
+	color:yellow;
+	font-size:150%;
+}
+p.testclass
+{
+	color:orange;
+	font-size:100%;
+}
+#demo
+{
+	color:pink;
+	font-size:200%;
+}
+#google
+{
+	float:left;
+	height:50px;
+}
+table
+{
+	border:1px solid red;
+	width:70%;
+	clear:left;
+}
+td
+{
+	border:1px solid black;
+}
+tr:nth-child(even)
+{
+	background-color:lightgrey;
+}
+tr:nth-child(odd)
+{
+	background-color:white;
+}
